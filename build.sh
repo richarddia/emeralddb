@@ -1,5 +1,5 @@
 #!/bin/bash
 cd build
-rm -rf *
+# rm -rf *
 cmake ..
 make

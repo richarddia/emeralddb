@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(EmeraldDB)
-include_directories(src/include boost src/bson/src)
+include_directories(src src/include boost src/bson/src)
 # link_directories(${PROJECT_SOURCE_DIR}/boost/stage/lib)
 
 message(STATUS "Search boost lib files(.a)")
@@ -12,6 +12,20 @@ add_executable(
     emeralddb 
     src/pmd/pmdMain.cpp
     src/pmd/pmdTest.cpp
+    src/bson/src/bsonobj.cpp 
+    src/bson/src/util/json.cpp 
+    src/bson/src/oid.cpp 
+    src/bson/src/lib/base64.cpp 
+    src/bson/src/lib/md5.cpp
+    src/bson/src/lib/nonce.cpp
+    src/oss/ossSocket.cpp
+)
+
+add_executable(
+    edb
+    src/client/edb.cpp
+    src/client/command.cpp
+    src/client/commandFactory.cpp
     src/bson/src/bsonobj.cpp 
     src/bson/src/util/json.cpp 
     src/bson/src/oid.cpp 
