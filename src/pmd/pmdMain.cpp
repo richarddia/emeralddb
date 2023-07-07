@@ -1,7 +1,8 @@
-#include <stdio.h>
-void foo();
+#include "core.hpp"
+
+int pmdTcpListenerEntryPoint();
+
 int main(int argc, char **argv) {
-    printf("Hello World\n");
-    foo();
+    pmdTcpListenerEntryPoint();
     return 0;
 }

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(EmeraldDB)
+set(CMAKE_BUILD_TYPE Debug)
+
 include_directories(src src/include boost src/bson/src)
 # link_directories(${PROJECT_SOURCE_DIR}/boost/stage/lib)
 
@@ -11,7 +13,7 @@ link_libraries(${BOOST_LIBS})
 add_executable(
     emeralddb 
     src/pmd/pmdMain.cpp
-    src/pmd/pmdTest.cpp
+    src/pmd/pmdTcpListener.cpp
     src/bson/src/bsonobj.cpp 
     src/bson/src/util/json.cpp 
     src/bson/src/oid.cpp 
