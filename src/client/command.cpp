@@ -189,6 +189,9 @@ int ICommand::sendOrder( ossSocket & sock, int opCode )
    int ret = EDB_OK;
    memset(_sendBuf, 0, SEND_BUF_SIZE);
    char * pSendBuf = _sendBuf;
+   const char *pStr = "hello world";
+   *(int*)pSendBuf = strlen(pStr) + 1 + sizeof(int);
+   memcpy ( &pSendBuf[4], pStr, strlen(pStr) + 1 );
    /*MsgHeader *header = (MsgHeader*)pSendBuf;
    header->messageLen = sizeof(MsgHeader);
    header->opCode = opCode;*/

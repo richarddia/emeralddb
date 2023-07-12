@@ -77,7 +77,9 @@ _ossSocket::_ossSocket ( SOCKET *sock, int timeout )
    else
    {
       rc = getpeername ( _fd, (sockaddr*)&_peerAddress, &_peerAddressLen ) ;
-      printf ( "Failed to get peer name, error = %d", SOCKET_GETLASTERROR ) ;
+      if ( rc ) {
+         printf ( "Failed to get peer name, error = %d", SOCKET_GETLASTERROR ) ;
+      }
    }
 done :
    return ;
