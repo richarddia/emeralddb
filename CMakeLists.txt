@@ -9,7 +9,7 @@ message(STATUS "Search boost lib files(.a)")
 file(GLOB BOOST_LIBS ${CMAKE_CURRENT_SOURCE_DIR}/boost/stage/lib/*.a)
 
 message(STATUS "link boost libs")
-link_libraries(${BOOST_LIBS})
+link_libraries(${BOOST_LIBS} pthread)
 add_executable(
     emeralddb 
     src/pmd/pmdMain.cpp
@@ -21,6 +21,7 @@ add_executable(
     src/bson/src/lib/md5.cpp
     src/bson/src/lib/nonce.cpp
     src/oss/ossSocket.cpp
+    src/oss/ossPrimitiveFileOp.cpp
 )
 
 add_executable(

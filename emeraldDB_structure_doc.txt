@@ -1,0 +1,17 @@
+MSG: messenger
+used to control message protocol
+
+PMD: processor model 
+include system main function, thread scheduling logic
+
+RTN: runtime, request process
+
+DMS: data management system
+IXM: index management system
+
+OSS: OS service layer
+MON: monitoring
+PD: problem determination
+
+
+
