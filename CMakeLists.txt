@@ -14,6 +14,7 @@ add_executable(
     emeralddb 
     src/pmd/pmdMain.cpp
     src/pmd/pmdTcpListener.cpp
+    src/pmd/pmdOptions.cpp
     src/bson/src/bsonobj.cpp 
     src/bson/src/util/json.cpp 
     src/bson/src/oid.cpp 
@@ -22,6 +23,8 @@ add_executable(
     src/bson/src/lib/nonce.cpp
     src/oss/ossSocket.cpp
     src/oss/ossPrimitiveFileOp.cpp
+    src/pd/pd.cpp
+    src/pmd/pmdOptions.cpp
 )
 
 add_executable(
@@ -36,4 +39,6 @@ add_executable(
     src/bson/src/lib/md5.cpp
     src/bson/src/lib/nonce.cpp
     src/oss/ossSocket.cpp
+    src/oss/ossPrimitiveFileOp.cpp
+    src/pd/pd.cpp
 )

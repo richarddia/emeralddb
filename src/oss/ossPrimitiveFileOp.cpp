@@ -72,6 +72,10 @@ offsetType ossPrimitiveFileOp::getCurrentOffset() const {
     return oss_lseek(_fileHandle, 0, SEEK_CUR);
 }
 
+void ossPrimitiveFileOp::seekToEnd(void) {
+    oss_lseek(_fileHandle, 0, SEEK_END);
+}
+
 void ossPrimitiveFileOp::seekToOffset(offsetType offset) {
     if ((oss_off_t) - 1 != offset) {
         oss_lseek(_fileHandle, offset, SEEK_SET);
