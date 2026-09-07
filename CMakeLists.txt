@@ -15,6 +15,7 @@ add_executable(
     src/pmd/pmdMain.cpp
     src/pmd/pmdTcpListener.cpp
     src/pmd/pmdOptions.cpp
+    src/pmd/pmd.cpp
     src/bson/src/bsonobj.cpp 
     src/bson/src/util/json.cpp 
     src/bson/src/oid.cpp 
