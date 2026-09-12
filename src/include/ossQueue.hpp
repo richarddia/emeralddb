@@ -62,12 +62,12 @@ public:
         _queue.pop();
     }
 
-    void time_wait_and_pop(Data& value, long long millsec) {
+    bool time_wait_and_pop(Data& value, long long millsec) {
         boost::system_time const timeout = boost::get_system_time() + boost::posix_time::millisec(millsec);
         boost::mutex::scoped_lock _lock(_mutex);
         while (_queue.empty()) {
             // thread will wait as soon as timed_wait is called
-            if (!_cond.timed_wait(&_lock, timeout)) {
+            if (!_cond.timed_wait(_lock, timeout)) {
                 return false;
             }
         }
