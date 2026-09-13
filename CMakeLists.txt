@@ -18,6 +18,7 @@ add_executable(
     src/pmd/pmd.cpp
     src/pmd/pmdEDU.cpp
     src/pmd/pmdEDUMgr.cpp
+    src/pmd/pmdAgent.cpp
     src/bson/src/bsonobj.cpp 
     src/bson/src/util/json.cpp 
     src/bson/src/oid.cpp 

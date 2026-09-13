@@ -14,6 +14,8 @@
 #define PMD_HPP__
 
 #include "core.hpp"
+#include "pmdEDUMgr.hpp"
+
 enum EDB_DB_STATUS {
     EDB_DB_NORMAL = 0,
     EDB_DB_SHUTDOWN,
@@ -36,6 +38,8 @@ private:
     int             _maxPool;
     char            _svcName[NI_MAXSERV + 1];
     EDB_DB_STATUS   _dbStatus;
+private:
+    pmdEDUMgr       _eduMgr;
 
 public:
     // constructor
@@ -48,6 +52,12 @@ public:
     }
     // destructor
     ~EDB_KRCB() {}
+
+    // inline function
+    // get edu mgr
+    pmdEDUMgr* getEDUMgr() {
+        return &_eduMgr;
+    }
     // get database status
     inline EDB_DB_STATUS getDBStatus() {
         return _dbStatus;
