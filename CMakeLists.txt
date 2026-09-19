@@ -29,6 +29,7 @@ add_executable(
     src/oss/ossPrimitiveFileOp.cpp
     src/pd/pd.cpp
     src/pmd/pmdOptions.cpp
+    src/msg/msg.cpp
 )
 
 add_executable(
@@ -45,4 +46,5 @@ add_executable(
     src/oss/ossSocket.cpp
     src/oss/ossPrimitiveFileOp.cpp
     src/pd/pd.cpp
+    src/msg/msg.cpp
 )
